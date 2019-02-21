@@ -19,6 +19,12 @@ body{
 
 }
 
+.showcase:hover .content{
+	filter: blur(2px);
+	-webkit-filter:blur(2px);
+
+}
+
 .showcase:hover::after{
 	filter: blur(0);
 	-webkit-filter:blur(0);
@@ -64,4 +70,111 @@ body{
 	line-height: 1.7;
 	margin-top: 1rem;
 
+}
+/*below used to set space on left and right*/
+
+.container{
+
+	max-width: 960px;
+	margin:auto;
+	overflow: hidden;
+	padding: 4rem 1rem;
+}
+
+.grid-3{
+	display: grid;
+
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-gap: 20px;
+	
+
+}
+
+
+/*utility classes*/
+
+.center{
+	text-align: center;
+	margin:auto;
+}
+
+
+.bg-light{
+	background: #f4f4f4;
+	color: #333;
+
+
+}
+
+.bg-dark{
+
+	color: #f4f4f4;
+	color: #333;
+
+
+}
+
+.grid-2{
+	display: grid;
+
+	grid-template-columns: 1fr  1fr;
+	grid-gap: 20px;
+	
+
+}
+
+
+footer {
+	margin:0;
+	padding: 2.2rem;
+}
+
+
+/*the meida query for small screen */
+@media(max-width: 650px){
+	.showcase::after{
+	height: 50vh ;
+
+}
+
+.content{
+	top: 5%;
+	margin-top:5px;
+
+}
+
+.content .logo {
+	height:140px;
+	width:140px;
+
+}
+
+.content .text{
+	display: none;
+}
+
+.grid-3,.grid-2{
+	grid-template-columns: 1fr;
+}
+
+
+.services div{
+	border-bottom: #333 dashed 4px;
+	padding: 1.2rem  1rem;
+	s
+}
+
+
+}
+
+/*medai query for landscape*/
+
+@media screen and (max-height: 500px){
+	.content .title ,.content .text{
+		display: none;
+	}
+
+	.content{
+		top:0;
+	}
 }
