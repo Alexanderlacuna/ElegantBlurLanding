@@ -1,0 +1,25 @@
+body{
+	background: rgba(0,0,0,0.9);
+	margin: 0;
+	color: #fff;
+	font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+}
+
+.showcase::after{
+	content:"";
+	height: 100vh;
+	background-image: url("https://image.ibb.co/gzOBup/showcase.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	display: block;
+	filter: blur(10px);
+	-webkit-filter:blur(10px);
+	transition: all 100ms;
+
+}
+
+.showcase:hover::after{
+	filter: blur(0);
+	-webkit-filter:blur(0);
+}
